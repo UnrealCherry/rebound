@@ -8,8 +8,9 @@ A real-time ricochet roguelite built with Godot. Aim into advancing enemy format
 
 **This repository currently contains this README only. Source code, models, other assets, and build files are not uploaded here.**
 
-- **Latest public game build: v0.33 · Crimson Echoes**, first published on 2026-10-02 at 07:49:10.350 UTC
-- A black, red, and warm-white comic HUD, original robot portraits, clearer player location markers, and responsive interface motion
+- **Latest public game build: v0.34 · Minimal UI**, first published on 2026-10-02 at 10:17:46.778 UTC
+- Clearer upgrade choices, compact menus, a quieter combat HUD, and softer quarry-floor lighting
+- The project page has a new charcoal, ivory, and coral design across downloads, updates, screenshots, and feedback
 - Downloadable builds, gameplay footage, and screenshots are available on the project page above
 - This is a desktop-game project, not a browser-playable game
 
@@ -44,13 +45,25 @@ Catch returning main balls by moving into their landing path. New quarry runs en
 
 The game is developed with **Godot 4.6.3**, using GDScript and the GL Compatibility renderer. Automated simulation, save, UI, audio, and packed-resource checks accompany development. Native Windows execution has not yet been verified; Windows exports have been inspected using Linux Godot.
 
-v0.33 completed 8,465 passing assertion executions, including repeated headless/native modes and 212 checks against the final Windows executable's embedded game package. These resource checks ran in Linux Godot; they are not native Windows OS validation.
+v0.34 completed 11,945 passing assertion executions: 10,174 across 29 source-suite invocations, 221 embedded-package checks, 1,274 packed modal/catalog/save checks, and 276 packed motion checks. Repeated source/package modes are counted as executions, not unique test scenarios. These resource checks ran in Linux Godot; they are not native Windows OS validation.
 
-Published comparison clips use fixed-step Godot replays and engine audio. The v0.33 clip combines a labelled interface test scene with labelled saved-run/legal-input replay excerpts. These clips do not establish real-time GPU performance, human win rates, or subjective speaker-listening quality. Audio is unchanged from v0.32. Hurt cues use available voices in a bounded audio pool, so a cue may be omitted when all voices are occupied.
+Media labels distinguish genuine saved-run/legal-input replays from controlled UI test states. The v0.34 motion clip is a silent 4.13-second frozen-combat UI test, and its results-screen image uses a controlled end state. These are not full-playthrough or real-time performance demonstrations. Music and sound effects are unchanged; no new subjective listening claim is made. Hurt cues use available voices in a bounded audio pool, so a cue may be omitted when all voices are occupied.
 
 ## Changelog
 
 Dates are the first successful public game-site publication times in **UTC**, where verified. They are not Git commit dates. Historical entries without a verified public timestamp are explicitly marked. The history describes earlier game builds, including the separate 2D edition; it does not mean their source or assets are included in this repository.
+
+### v0.34 · Minimal UI
+
+2026-10-02 · 10:17:46.778 UTC
+
+- Rebuilt upgrade and relic screens as three parallel, lightly framed choices with complete effects and penalties. Hover previews, the locked selection, and final confirmation remain distinct.
+- Made pause and settings compact two-column layouts, keeping resume, suspend, and end-run actions visible without scrolling to the bottom. Short keycaps match the actual controls.
+- Reduced heavy HUD outlines, decorative portrait space, and competing boss/combo ornament while retaining exact health, ranks, and actionable warnings. Full-screen menus fade the combat HUD and use soft local shading over the recognizable arena.
+- Unified title, character/configuration, journal, help, results, suspend/replacement, and practice screens. Journal Back stays visible; current effects are distinct from next-rank previews. Results prioritize the full score and major damage sources.
+- Made suspend failures visible while retaining the current run, focused Cancel by default for replacement confirmation, and aligned practice guidance with click-then-confirm or direct number-key selection.
+- Retained short interruptible transitions and reduced/off-effects paths. Quarry floor emission is half its previous strength. Original models, music, sound, combat math, RNG, save format, and warning geometry/timing remain unchanged; old 3D suspended runs stay compatible.
+- Separately redesigned the project page in charcoal, ivory, and coral: compact navigation and download area, update/video sections, expandable history, screenshot gallery, guestbook, getting-started steps, and footer. Historical text, first-publication times, and existing comments were preserved.
 
 ### v0.33 · Crimson Echoes
 
@@ -288,8 +301,9 @@ REBOUND《深渊回响》是一款使用 Godot 制作的实时弹射肉鸽原型
 
 **本仓库目前只有这份 README，暂不上传代码、模型、其他素材和构建文件。**
 
-- **最新公开游戏版本：v0.33 · 红影回响**，首次公开于 2026-10-02 07:49:10.350 UTC（北京时间 15:49）
-- 黑、红、米白配色的漫画风 HUD、原创机器人半身像、清楚的玩家定位角标与界面动效
+- **最新公开游戏版本：v0.34 · 简洁界面**，首次公开于 2026-10-02 10:17:46.778 UTC（北京时间 18:17）
+- 更清楚的升级选择、紧凑菜单、简洁战斗 HUD，以及柔和的矿渊地板明暗
+- 项目页同步换为炭黑、米白与珊瑚色设计，覆盖下载、更新、截图和留言区域
 - 游戏下载、实机片段和截图见上方项目页
 - 本项目是桌面游戏，不是网页即玩游戏
 
@@ -324,13 +338,25 @@ REBOUND《深渊回响》是一款使用 Godot 制作的实时弹射肉鸽原型
 
 开发引擎为 **Godot 4.6.3**，使用 GDScript 与 GL Compatibility 渲染器。开发过程中进行模拟、存档、界面、音频和打包资源检查。Windows 包已通过 Linux Godot 下的导出资源检查，但尚未完成原生 Windows 系统运行验证。
 
-v0.33 合计完成 8,465 次通过的断言执行，包含重复的无窗口/原生渲染模式，以及针对最终 Windows 程序内嵌游戏包的 212 项检查。资源检查在 Linux Godot 下完成，不等于原生 Windows 系统运行验证。
+v0.34 合计完成 11,945 次通过的断言执行：29 次源码套件调用中的 10,174 次断言、221 项内嵌包检查、1,274 项打包后的菜单/图鉴/存档检查，以及 276 项打包后动效检查。重复的源码/打包模式按执行次数统计，不称为独立测试场景。资源检查在 Linux Godot 下完成，不等于原生 Windows 系统运行验证。
 
-已发布对比影片为 Godot 固定步进回放和引擎声音。v0.33 影片包含标注过的界面验收场景，以及标注过的真实存档/合法输入回放片段，不代表实时 GPU 帧率、人工通关率或物理扬声器的主观听感。声音沿用 v0.32。受伤提示使用有上限的共享声部，声部全部占用时可能不播放。
+展示素材明确区分真实存档/合法输入回放和受控 UI 测试。v0.34 动效视频为 4.13 秒无声的冻结战斗 UI 测试，结算图使用受控结束状态；这些素材不代表完整通关或实时性能。音乐与音效未改动，不增加新的主观听感结论。受伤提示使用有上限的共享声部，声部全部占用时可能不播放。
 
 ## 中文更新日志
 
 有证据时，下列时间采用游戏站首次成功公开发布的 **UTC 时间**，并非 Git 提交时间。未确认公开时间的早期版本标为历史记录，不补造日期。日志描述历史游戏版本，包括独立的 2D 版，并不代表本仓库包含其源码或素材。
+
+### v0.34 · 简洁界面
+
+2026-10-02 · 10:17:46.778 UTC
+
+- 升级与遗物改为并排三选项，弱化边框，完整展示真实效果与代价；悬停预览、已选项和最终确认分开。
+- 暂停与设置采用紧凑双栏，继续、暂存和结束本局等主要操作无需滚到页面底部；短键帽与真实操作一致。
+- 战斗 HUD 减少厚重描边、装饰画像和过强的首领/连击装饰，保留准确耐久、等级与关键提示。全屏菜单淡出战斗 HUD，以柔和局部遮罩保留可辨认的场景。
+- 标题、角色与配置、图鉴、帮助、结算、暂存/替换确认和练习统一简洁层级。图鉴返回按钮固定可见，当前效果与下一等级预览分开，结算突出完整得分和主要伤害来源。
+- 暂存失败明确提示并保留当前战局，替换暂存默认聚焦取消；练习说明准确对应点选后确认或直接按数字键的行为。
+- 保留短促可中断动效，以及低特效/关闭特效路径。矿渊地板自发光减为此前一半。原创模型、音乐、音效、战斗数值、随机数、存档格式和危险预警几何/时序保持不变，旧 3D 暂存继续兼容。
+- 项目页另行完成炭黑、米白与珊瑚色改版，覆盖导航、紧凑下载区、更新与视频、可展开历史、截图库、留言板、开始步骤及页尾；保留历史正文、首次发布时间和已有留言。
 
 ### v0.33 · 红影回响
 
