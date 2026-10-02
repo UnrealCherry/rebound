@@ -8,8 +8,8 @@ A real-time ricochet roguelite built with Godot. Aim into advancing enemy format
 
 **This repository currently contains this README only. Source code, models, other assets, and build files are not uploaded here.**
 
-- **Latest public game build: v0.32 · Interaction Echoes**, first published on 2026-10-02 at 06:41:16.216 UTC
-- Nine independently redesigned 3D characters and bosses, clearer interaction feedback, distinct projectile silhouettes, and responsive UI/audio presentation
+- **Latest public game build: v0.33 · Crimson Echoes**, first published on 2026-10-02 at 07:49:10.350 UTC
+- A black, red, and warm-white comic HUD, original robot portraits, clearer player location markers, and responsive interface motion
 - Downloadable builds, gameplay footage, and screenshots are available on the project page above
 - This is a desktop-game project, not a browser-playable game
 
@@ -44,13 +44,24 @@ Catch returning main balls by moving into their landing path. New quarry runs en
 
 The game is developed with **Godot 4.6.3**, using GDScript and the GL Compatibility renderer. Automated simulation, save, UI, audio, and packed-resource checks accompany development. Native Windows execution has not yet been verified; Windows exports have been inspected using Linux Godot.
 
-v0.32 passed 6,967 final automated assertions across 23 suite invocations, plus 177 checks against the final Windows executable's embedded game package. These resource checks ran in Linux Godot; they are not native Windows OS validation.
+v0.33 completed 8,465 passing assertion executions, including repeated headless/native modes and 212 checks against the final Windows executable's embedded game package. These resource checks ran in Linux Godot; they are not native Windows OS validation.
 
-Published comparison clips use fixed-step Godot replays and engine audio. The v0.32 clip combines a labelled menu-interaction test scene with two labelled saved-run/legal-input replay excerpts. These clips do not establish real-time GPU performance, human win rates, or subjective speaker-listening quality. Hurt cues use available voices in a bounded audio pool, so a cue may be omitted when all voices are occupied.
+Published comparison clips use fixed-step Godot replays and engine audio. The v0.33 clip combines a labelled interface test scene with labelled saved-run/legal-input replay excerpts. These clips do not establish real-time GPU performance, human win rates, or subjective speaker-listening quality. Audio is unchanged from v0.32. Hurt cues use available voices in a bounded audio pool, so a cue may be omitted when all voices are occupied.
 
 ## Changelog
 
 Dates are the first successful public game-site publication times in **UTC**, where verified. They are not Git commit dates. Historical entries without a verified public timestamp are explicitly marked. The history describes earlier game builds, including the separate 2D edition; it does not mean their source or assets are included in this repository.
+
+### v0.33 · Crimson Echoes
+
+2026-10-02 · 07:49:10.350 UTC
+
+- Rebuilt the HUD in a black, red, and warm-white comic style, with a brush-stroke title mark, bold durability numbers and red health bar, a boss badge, and a purple-and-white COMBO display on the right.
+- Added glowing chamfered icons for skills and evolutions. Normal skills show their actual three-level cap; Repair shows its actual acquisition count without implying a nonexistent fourth level.
+- Added matching comic bust portraits for both original robots. Skill, catch, and upgrade messages take priority; decorative portraits hide when space is limited.
+- Retained hover/press feedback, interruptible panel transitions, the settling health trail, and short combo pulses. Redrew the pause button and expanded the HUD's aim-exclusion area so hovering over the interface preserves the current aim direction.
+- Replaced the player's ground marker with stable warm-white corner marks that stay distinct from frost trails. Existing characters, camera, collision, combat values, warning shapes/timing, RNG, saves, and audio remain unchanged.
+- Checked 1180- and 960-wide layouts, dense inventories, large numbers, reduced/zero effects, and pause/upgrade interaction. The final validation recorded 8,465 passing assertion executions, including repeated modes and 212 packed-resource checks. Native Windows OS execution remains untested.
 
 ### v0.32 · Interaction Echoes
 
@@ -277,8 +288,8 @@ REBOUND《深渊回响》是一款使用 Godot 制作的实时弹射肉鸽原型
 
 **本仓库目前只有这份 README，暂不上传代码、模型、其他素材和构建文件。**
 
-- **最新公开游戏版本：v0.32 · 交互回响**，首次公开于 2026-10-02 06:41:16.216 UTC（北京时间 14:41）
-- 九个重新独立设计的 3D 角色和首领，以及更清楚的交互反馈、弹珠轮廓和界面音画表现
+- **最新公开游戏版本：v0.33 · 红影回响**，首次公开于 2026-10-02 07:49:10.350 UTC（北京时间 15:49）
+- 黑、红、米白配色的漫画风 HUD、原创机器人半身像、清楚的玩家定位角标与界面动效
 - 游戏下载、实机片段和截图见上方项目页
 - 本项目是桌面游戏，不是网页即玩游戏
 
@@ -313,13 +324,24 @@ REBOUND《深渊回响》是一款使用 Godot 制作的实时弹射肉鸽原型
 
 开发引擎为 **Godot 4.6.3**，使用 GDScript 与 GL Compatibility 渲染器。开发过程中进行模拟、存档、界面、音频和打包资源检查。Windows 包已通过 Linux Godot 下的导出资源检查，但尚未完成原生 Windows 系统运行验证。
 
-v0.32 通过 23 次测试套件调用中的 6,967 项最终自动断言，以及针对最终 Windows 程序内嵌游戏包的 177 项检查。资源检查在 Linux Godot 下完成，不等于原生 Windows 系统运行验证。
+v0.33 合计完成 8,465 次通过的断言执行，包含重复的无窗口/原生渲染模式，以及针对最终 Windows 程序内嵌游戏包的 212 项检查。资源检查在 Linux Godot 下完成，不等于原生 Windows 系统运行验证。
 
-已发布对比影片为 Godot 固定步进回放和引擎声音。v0.32 影片包含标注过的菜单交互验收场景，以及两段标注过的真实存档/合法输入回放片段，不代表实时 GPU 帧率、人工通关率或物理扬声器的主观听感。受伤提示使用有上限的共享声部，声部全部占用时可能不播放。
+已发布对比影片为 Godot 固定步进回放和引擎声音。v0.33 影片包含标注过的界面验收场景，以及标注过的真实存档/合法输入回放片段，不代表实时 GPU 帧率、人工通关率或物理扬声器的主观听感。声音沿用 v0.32。受伤提示使用有上限的共享声部，声部全部占用时可能不播放。
 
 ## 中文更新日志
 
 有证据时，下列时间采用游戏站首次成功公开发布的 **UTC 时间**，并非 Git 提交时间。未确认公开时间的早期版本标为历史记录，不补造日期。日志描述历史游戏版本，包括独立的 2D 版，并不代表本仓库包含其源码或素材。
+
+### v0.33 · 红影回响
+
+2026-10-02 · 07:49:10.350 UTC
+
+- HUD 重做为黑、红、米白配色的漫画风，加入笔刷标志、醒目的耐久数字与红色血条、首领徽章，以及右侧紫白色 COMBO。
+- 技能与进化改用发光切角图标；普通技能准确显示三级上限，修复显示实际获得次数，不暗示不存在的第四级。
+- 两位原创机器人增加对应的漫画半身像。技能、接回和升级提示优先显示，空间不足时隐藏装饰画像。
+- 保留悬停、按下反馈、可中断界面过渡、血条余量和连击短脉冲；重绘暂停按钮，扩大 HUD 的瞄准隔离范围，悬停界面时保持当前瞄准方向。
+- 玩家脚下改为稳定的米白定位角标，与冰霜轨迹区分。原有角色、镜头、碰撞、战斗数值、预警形状与时序、随机数、存档和声音保持不变。
+- 检查 1180 和 960 宽度、高密度技能、大数字、低/关闭特效以及暂停和升级操作。最终验收合计 8,465 次通过的断言执行，包含重复模式和 212 项打包资源检查；原生 Windows 系统运行仍未测试。
 
 ### v0.32 · 交互回响
 
