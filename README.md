@@ -8,8 +8,8 @@ A real-time ricochet roguelite built with Godot. Aim into advancing enemy format
 
 **This repository currently contains this README only. Source code, models, other assets, and build files are not uploaded here.**
 
-- **Latest public game build: v0.34 · Minimal UI**, first published on 2026-10-02 at 10:17:46.778 UTC
-- Clearer upgrade choices, compact menus, a quieter combat HUD, and softer quarry-floor lighting
+- **Latest public game build: v0.36 · A Clearer Wall-Contact Accent**, first published on 2026-10-02 at 19:07:02.024 UTC
+- A modest wall-ricochet accent, retaining v0.35's sixteen skill/fusion icons, numeric labels, and compact projectile effects
 - The project page has a new charcoal, ivory, and coral design across downloads, updates, screenshots, and feedback
 - Downloadable builds, gameplay footage, and screenshots are available on the project page above
 - This is a desktop-game project, not a browser-playable game
@@ -45,13 +45,35 @@ Catch returning main balls by moving into their landing path. New quarry runs en
 
 The game is developed with **Godot 4.6.3**, using GDScript and the GL Compatibility renderer. Automated simulation, save, UI, audio, and packed-resource checks accompany development. Native Windows execution has not yet been verified; Windows exports have been inspected using Linux Godot.
 
-v0.34 completed 11,945 passing assertion executions: 10,174 across 29 source-suite invocations, 221 embedded-package checks, 1,274 packed modal/catalog/save checks, and 276 packed motion checks. Repeated source/package modes are counted as executions, not unique test scenarios. These resource checks ran in Linux Godot; they are not native Windows OS validation.
+v0.36 verification covers 11,236 focused contact-geometry assertion executions, 768 unchanged hit/catch/disabled cases, 1,800 deterministic gameplay/save/RNG frames, and 180 native comparison states. All 60 corresponding Off images are pixel-identical. Baseline/package checks matched 78 scripts, 26 runtime image/audio/font resources, and 44 model scenes. These are the v0.36 checks, not a rerun of every historical test.
 
-Media labels distinguish genuine saved-run/legal-input replays from controlled UI test states. The v0.34 motion clip is a silent 4.13-second frozen-combat UI test, and its results-screen image uses a controlled end state. These are not full-playthrough or real-time performance demonstrations. Music and sound effects are unchanged; no new subjective listening claim is made. Hurt cues use available voices in a bounded audio pool, so a cue may be omitted when all voices are occupied.
+The final embedded package ran in Linux Godot 4.6.3 with OpenGL Compatibility and llvmpipe. Native Windows execution remains untested. The six-second muted before/after clip contains three separately restored two-second Normal/Low/Off excerpts at a fixed 60 Hz simulation and 30 Hz capture; it does not measure real-time FPS or show an uninterrupted human playthrough. The warning-overlap image is a deliberate visual test fixture, not natural boss gameplay. Audio is unchanged and no subjective listening assessment is claimed.
 
 ## Changelog
 
 Dates are the first successful public game-site publication times in **UTC**, where verified. They are not Git commit dates. Historical entries without a verified public timestamp are explicitly marked. The history describes earlier game builds, including the separate 2D edition; it does not mean their source or assets are included in this repository.
+
+### v0.36 · A Clearer Wall-Contact Accent
+
+2026-10-02 · 19:07:02.024 UTC
+
+- Made a small readability adjustment to wall ricochets: contact strokes retain their existing position and timing, with a short pale core, stronger taper, and brief peak before fading.
+- Normal effects are slightly clearer, Low stays subdued, and Off still hides the effect. Hit and catch contacts are unchanged.
+- Preserved ball heads, wakes, damage, collision rules, skill effects, RNG, and save compatibility. Menu and window labels now read v0.36; the simulation/save version is unchanged.
+- Verified 11,236 focused contact-geometry assertions and 768 unchanged hit/catch/disabled cases, 1,800 deterministic gameplay/save/RNG frames, and 180 native comparison states. All 60 corresponding Off images are pixel-identical. A deliberately constructed warning-overlap fixture preserved warning geometry in all three modes.
+- The final embedded package was checked and exercised in Linux Godot, including resuming a v0.35 suspended run, pause/resume, upgrades, and results. Native Windows execution remains untested. The muted six-second before/after clip uses three separately restored two-second fixed-step excerpts; it is not a real-time performance test or continuous human playthrough.
+
+### v0.35 · Clearer Skills and Projectiles
+
+2026-10-02 · 11:07:58.428 UTC
+
+- Replaced eleven skill icons and five fusion icons with distinct effect-shaped artwork. Compact markers retain exact ranks while removing persistent inventory frames and wide rank strips.
+- Distinguished facts, benefits, costs, and previous values in upgrade and current-build descriptions. Benefit/cost labels preserve meaning without relying on color alone.
+- Shorter reload intervals display as a benefit, lower stone-wear floors as a cost, and capped repairs no longer imply an extra improvement. Signs, values, conditions, and limits are preserved.
+- Added compact faceted ball heads, short tapered wakes, and directional contact fragments. Wakes follow genuine ricochet waypoints rather than cutting across recorded corners.
+- Low effects shorten and soften wakes. Off retains solid heads and shadows while removing wakes/contact geometry; the impact-feedback switch also suppresses contact fragments.
+- Retained v0.34's minimal interface and quieter floor. Gameplay, damage, skill/fusion effects, RNG, save schema, controls, original audio, and 3D suspended-run compatibility are unchanged.
+- Historical verification recorded 11,676 headless, 2,021 native Linux, 238 embedded-resource, and 1,639 packed-UI assertion executions, including repeated modes, plus six pointer checks. The muted six-second clip uses separately restored fixed-step excerpts; native Windows was untested.
 
 ### v0.34 · Minimal UI
 
@@ -301,8 +323,8 @@ REBOUND《深渊回响》是一款使用 Godot 制作的实时弹射肉鸽原型
 
 **本仓库目前只有这份 README，暂不上传代码、模型、其他素材和构建文件。**
 
-- **最新公开游戏版本：v0.34 · 简洁界面**，首次公开于 2026-10-02 10:17:46.778 UTC（北京时间 18:17）
-- 更清楚的升级选择、紧凑菜单、简洁战斗 HUD，以及柔和的矿渊地板明暗
+- **最新公开游戏版本：v0.36 · 墙面反弹的小幅清晰度优化**，首次公开于 2026-10-02 19:07:02.024 UTC（北京时间 10 月 3 日 03:07）
+- 小幅强化墙面反弹瞬间，保留 v0.35 的 16 个技能/进化图标、语义数值标识和紧凑弹珠效果
 - 项目页同步换为炭黑、米白与珊瑚色设计，覆盖下载、更新、截图和留言区域
 - 游戏下载、实机片段和截图见上方项目页
 - 本项目是桌面游戏，不是网页即玩游戏
@@ -338,13 +360,35 @@ REBOUND《深渊回响》是一款使用 Godot 制作的实时弹射肉鸽原型
 
 开发引擎为 **Godot 4.6.3**，使用 GDScript 与 GL Compatibility 渲染器。开发过程中进行模拟、存档、界面、音频和打包资源检查。Windows 包已通过 Linux Godot 下的导出资源检查，但尚未完成原生 Windows 系统运行验证。
 
-v0.34 合计完成 11,945 次通过的断言执行：29 次源码套件调用中的 10,174 次断言、221 项内嵌包检查、1,274 项打包后的菜单/图鉴/存档检查，以及 276 项打包后动效检查。重复的源码/打包模式按执行次数统计，不称为独立测试场景。资源检查在 Linux Godot 下完成，不等于原生 Windows 系统运行验证。
+v0.36 验证包括 11,236 次接触几何断言执行、768 个保持不变的命中/接回/关闭特效用例、1,800 帧玩法/存档/随机数一致的固定输入回放，以及 180 帧状态一致的原生对比；其中关闭特效的 60 帧图像逐像素一致。基线/打包检查匹配 78 个脚本、26 个运行时图片/音频/字体资源和 44 个模型场景。这些是本轮 v0.36 的验证范围，不代表重新运行了全部历史测试。
 
-展示素材明确区分真实存档/合法输入回放和受控 UI 测试。v0.34 动效视频为 4.13 秒无声的冻结战斗 UI 测试，结算图使用受控结束状态；这些素材不代表完整通关或实时性能。音乐与音效未改动，不增加新的主观听感结论。受伤提示使用有上限的共享声部，声部全部占用时可能不播放。
+最终内嵌包在 Linux Godot 4.6.3、OpenGL Compatibility 和 llvmpipe 下运行，尚未进行原生 Windows 实机测试。6 秒无声前后对比片由标准/低/关闭三段分别恢复存档的 2 秒片段组成，模拟固定 60 Hz、采集 30 Hz，不代表实时帧率或连续人工游玩。危险区域重叠图是刻意构造的视觉验收场景，并非自然首领实战；音频未改动，未作主观听感评价。
 
 ## 中文更新日志
 
 有证据时，下列时间采用游戏站首次成功公开发布的 **UTC 时间**，并非 Git 提交时间。未确认公开时间的早期版本标为历史记录，不补造日期。日志描述历史游戏版本，包括独立的 2D 版，并不代表本仓库包含其源码或素材。
+
+### v0.36 · 墙面反弹的小幅清晰度优化
+
+2026-10-02 · 19:07:02.024 UTC
+
+- 小幅调整墙面反弹的可读性：接触笔触仍在原有碰撞位置和时刻出现，增加短促浅色亮芯、更明显的渐细，以及淡出前的短暂峰值。
+- 标准特效更清楚一点，低特效保持克制，关闭特效仍不显示；命中和接回的接触效果保持不变。
+- 弹珠本体、尾迹、伤害、碰撞规则、技能效果、随机数和存档兼容性不变。菜单与窗口标记统一为 v0.36，模拟/存档版本标记保留。
+- 通过 11,236 次接触几何断言执行，768 个命中/接回/关闭特效用例保持不变；1,800 帧固定输入回放的玩法/存档/随机数一致，180 帧原生对比状态一致，关闭特效的 60 帧图像逐像素一致。刻意构造的危险区域重叠测试在三种模式下均保留原预警几何。
+- 最终内嵌包已检查，并在 Linux Godot 中操作继续 v0.35 暂存、暂停/继续、升级和结算；原生 Windows 仍未测试。6 秒无声前后对比由三段分别恢复存档的 2 秒固定步进片段组成，不代表实时性能或连续人工游玩。
+
+### v0.35 · 技能与弹珠更清晰
+
+2026-10-02 · 11:07:58.428 UTC
+
+- 11 个技能与 5 个进化图标改为独立的效果造型，保留精确等级的小标记，移除常驻外框与整条等级条。
+- 升级与当前构筑说明区分事实数值、收益、代价和旧值，收益/代价同时带有文字标识，不仅依赖颜色。
+- 更短的齐射间隔标为收益，更低的岩芯磨损下限标为代价；修复已达上限时不再暗示额外提升。符号、数值、条件和限制均保留。
+- 弹珠加入紧凑立体切面、短而渐细的尾迹和方向性接触碎片，尾迹沿真实碰撞拐点绘制，避免跨过已记录的反弹转角。
+- 低特效缩短、减弱尾迹；关闭特效保留实体弹珠和阴影，移除尾迹与接触碎片；命中反馈开关也控制接触碎片。
+- 保留 v0.34 简洁界面与较安静的地面。玩法、伤害、技能/进化效果、随机数、存档格式、按键、原有音频及 3D 暂存兼容性未改动。
+- 当时记录 11,676 次无界面、2,021 次原生 Linux、238 次内嵌资源及 1,639 次打包界面断言执行，包含重复模式，另有六项鼠标检查。6 秒无声短片由分别恢复的固定步进片段组成，原生 Windows 当时未测试。
 
 ### v0.34 · 简洁界面
 
