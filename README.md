@@ -8,8 +8,8 @@ A real-time ricochet roguelite built with Godot. Aim into advancing enemy format
 
 **This repository currently contains this README only. Source code, models, other assets, and build files are not uploaded here.**
 
-- **Latest public game build: v0.31**, first published on 2026-10-02 (UTC)
-- **v0.32: in development**, including an independently redesigned 3D character roster and further presentation work; the combined game build is still under validation
+- **Latest public game build: v0.32 · Interaction Echoes**, first published on 2026-10-02 at 06:41:16.216 UTC
+- Nine independently redesigned 3D characters and bosses, clearer interaction feedback, distinct projectile silhouettes, and responsive UI/audio presentation
 - Downloadable builds, gameplay footage, and screenshots are available on the project page above
 - This is a desktop-game project, not a browser-playable game
 
@@ -44,18 +44,25 @@ Catch returning main balls by moving into their landing path. New quarry runs en
 
 The game is developed with **Godot 4.6.3**, using GDScript and the GL Compatibility renderer. Automated simulation, save, UI, audio, and packed-resource checks accompany development. Native Windows execution has not yet been verified; Windows exports have been inspected using Linux Godot.
 
-Published comparison clips use fixed-step Godot replays and engine audio. They do not establish real-time GPU performance, human win rates, or subjective speaker-listening quality. v0.31's hurt cue uses available voices in a bounded audio pool, so it may be omitted when all voices are occupied.
+v0.32 passed 6,967 final automated assertions across 23 suite invocations, plus 177 checks against the final Windows executable's embedded game package. These resource checks ran in Linux Godot; they are not native Windows OS validation.
+
+Published comparison clips use fixed-step Godot replays and engine audio. The v0.32 clip combines a labelled menu-interaction test scene with two labelled saved-run/legal-input replay excerpts. These clips do not establish real-time GPU performance, human win rates, or subjective speaker-listening quality. Hurt cues use available voices in a bounded audio pool, so a cue may be omitted when all voices are occupied.
 
 ## Changelog
 
 Dates are the first successful public game-site publication times in **UTC**, where verified. They are not Git commit dates. Historical entries without a verified public timestamp are explicitly marked. The history describes earlier game builds, including the separate 2D edition; it does not mean their source or assets are included in this repository.
 
-### v0.32 · In development
+### v0.32 · Interaction Echoes
 
-- Independently redesigned 3D character models, with editable authoring sources prepared separately
-- Removal of downloaded sprite/effect assets from the active 3D working project
-- Further UI, audio, and visual-feedback work undergoing combined validation
-- **Not yet a released game build; no release date is claimed**
+2026-10-02 · 06:41:16.216 UTC
+
+- Replaced all nine character and boss models with independently redesigned 3D originals, including Cairn Courier and Flux Weaver. Added a stable thin player outline and ground marker while preserving collision geometry, attack cadence, and save identifiers.
+- Added interruptible pause/journal fades, button hover/focus/press feedback, immediate HP numbers with a smoothly settling health trail, and brief combo/skill-acquisition motion. Reduced and zero-effects modes retain essential information.
+- Grouped audio, music, and display settings in the pause screen, moved detailed combat rules to the journal, and separated upgrade-card type icons, levels, and actual value changes.
+- Gave normal, fire, frost, and arc balls distinct silhouettes and compact trails. Real direct hits trigger a brief local flash; damage-over-time does not repeatedly flash. Existing danger warnings remain readable.
+- Added quiet select/back/confirm sounds within the existing five-voice pool. The original four music stems smoothly change arrangement in response to real warnings and living bosses, preserving the continuous beat.
+- Removed old downloaded images and previous character models from the runtime package; font and music notices are included with the game. Combat math, RNG, and old 3D-save compatibility remain unchanged.
+- The final build passed 7,144 automated assertions/resource checks in total. Native Windows OS execution remains untested; source code and assets are still not uploaded to this README-only repository.
 
 ### v0.31 · Slate Quarry
 
@@ -270,8 +277,8 @@ REBOUND《深渊回响》是一款使用 Godot 制作的实时弹射肉鸽原型
 
 **本仓库目前只有这份 README，暂不上传代码、模型、其他素材和构建文件。**
 
-- **最新公开游戏版本：v0.31**，首次公开于 2026-10-02（UTC）
-- **v0.32 正在开发**：包含重新独立设计的 3D 角色和后续表现改进，整合版仍在验收
+- **最新公开游戏版本：v0.32 · 交互回响**，首次公开于 2026-10-02 06:41:16.216 UTC（北京时间 14:41）
+- 九个重新独立设计的 3D 角色和首领，以及更清楚的交互反馈、弹珠轮廓和界面音画表现
 - 游戏下载、实机片段和截图见上方项目页
 - 本项目是桌面游戏，不是网页即玩游戏
 
@@ -306,18 +313,25 @@ REBOUND《深渊回响》是一款使用 Godot 制作的实时弹射肉鸽原型
 
 开发引擎为 **Godot 4.6.3**，使用 GDScript 与 GL Compatibility 渲染器。开发过程中进行模拟、存档、界面、音频和打包资源检查。Windows 包已通过 Linux Godot 下的导出资源检查，但尚未完成原生 Windows 系统运行验证。
 
-已发布对比影片为 Godot 固定步进回放和引擎声音，不代表实时 GPU 帧率、人工通关率或物理扬声器的主观听感。v0.31 受伤提示使用有上限的共享声部，声部全部占用时可能不播放。
+v0.32 通过 23 次测试套件调用中的 6,967 项最终自动断言，以及针对最终 Windows 程序内嵌游戏包的 177 项检查。资源检查在 Linux Godot 下完成，不等于原生 Windows 系统运行验证。
+
+已发布对比影片为 Godot 固定步进回放和引擎声音。v0.32 影片包含标注过的菜单交互验收场景，以及两段标注过的真实存档/合法输入回放片段，不代表实时 GPU 帧率、人工通关率或物理扬声器的主观听感。受伤提示使用有上限的共享声部，声部全部占用时可能不播放。
 
 ## 中文更新日志
 
 有证据时，下列时间采用游戏站首次成功公开发布的 **UTC 时间**，并非 Git 提交时间。未确认公开时间的早期版本标为历史记录，不补造日期。日志描述历史游戏版本，包括独立的 2D 版，并不代表本仓库包含其源码或素材。
 
-### v0.32 · 开发中
+### v0.32 · 交互回响
 
-- 重新独立设计的 3D 角色，可编辑制作源文件另行准备
-- 从活跃 3D 工作项目中移除下载的角色精灵与特效素材
-- 后续界面、音频和视觉反馈改进正在整体验证
-- **尚未作为游戏版本发布，不标注发布日期**
+2026-10-02 · 06:41:16.216 UTC
+
+- 换成九个重新独立设计的原创 3D 角色和首领，包括岩标信使、流光织者；玩家增加稳定薄描边与脚下标记。保留碰撞位置、攻击节奏和存档标识。
+- 暂停和图鉴加入可中断的淡入淡出，按钮有悬停、聚焦和按下反馈；耐久数字立即更新，血条余量平滑收拢，连击和技能获得有短促动效。轻量和零特效模式保留基本信息。
+- 暂停页集中音效、音乐和画面设置，详细战斗规则移到图鉴说明；升级卡片分开显示类型图标、等级和实际数值变化。
+- 普通、火焰、冰霜、电弧弹使用不同轮廓与收束轨迹；真实直伤触发目标局部短闪，持续伤害不重复闪烁，保留危险预警。
+- 选择、返回和确认增加安静的操作声，共用原有五个声部；原有四条原创音乐声部根据真实预警与存活首领平滑调整层次，保持连续节拍。
+- 运行包移除旧下载图片与旧角色模型，随包提供字体和音乐许可说明；战斗数值、随机数和旧 3D 暂存兼容性保持不变。
+- 最终版本合计通过 7,144 项自动断言与打包资源检查。尚未在原生 Windows 系统运行；本 GitHub 仓库仍只有 README，未上传代码或素材。
 
 ### v0.31 · 冷岩矿渊
 
